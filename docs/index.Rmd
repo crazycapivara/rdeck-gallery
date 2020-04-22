@@ -1,0 +1,38 @@
+---
+title: r-deckgl Gallery
+---
+
+This website is designed to show [r-deckgl](https://github.com/crazycapivara/deckgl) examples.
+
+## Get Started
+
+```{r message = FALSE}
+library(deckgl)
+
+data("sf_bike_parking")
+
+html <- paste(
+  "<p>Grid Layer</p>",
+  "<p>Use the editor to change layer props.</p>",
+  "<p>Press <span style='color: #ba2313;'>e</span> when focused on the map to show / hide the editor."
+)
+
+deckgl(
+  bearing = 35, pitch = 45, zoom = 12,
+  width = "100%", height = "500px",
+  style = list(background = "black")
+) %>%
+  add_grid_layer(
+    data = sf_bike_parking,
+    getPosition = ~lng + lat,
+    cellSize = 300,
+    extruded = TRUE,
+    elevationScale = 4,
+    colorRange = RColorBrewer::brewer.pal(6, "YlOrBr"),
+    colorScaleType = "ordinal",
+    visible = TRUE,
+    tooltip = "Count: {{points.length}}"
+  ) %>%
+  add_control(html, pos = "top-right") %>%
+  add_json_editor()
+```

@@ -1,0 +1,6 @@
+html_document:
+    theme: flatly
+    mathjax: null
+    self_contained: false
+    lib_dir: libs
+    code_folding: hide
