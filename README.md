@@ -3,4 +3,4 @@
 rdeck-gallery
 =============
 
-Gallery of the [deckgl-R-package](https://github.com/crazycapivara/deckgl).
+Gallery of the [r-deckgl package](https://github.com/crazycapivara/deckgl).
