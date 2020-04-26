@@ -6,16 +6,12 @@ This website is designed to show [r-deckgl](https://github.com/crazycapivara/dec
 
 ## Get Started
 
+Use the editor to change layer props. Press "e" when focused on the map to show / hide the editor.
+
 ```{r message = FALSE}
 library(deckgl)
 
 data("sf_bike_parking")
-
-html <- paste(
-  "<p>Grid Layer</p>",
-  "<p>Use the editor to change layer props.</p>",
-  "<p>Press <span style='color: #ba2313;'>e</span> when focused on the map to show / hide the editor."
-)
 
 deckgl(
   bearing = 35, pitch = 45, zoom = 12,
@@ -33,6 +29,6 @@ deckgl(
     visible = TRUE,
     tooltip = "Count: {{points.length}}"
   ) %>%
-  add_control(html, pos = "top-right") %>%
-  add_json_editor()
+  add_control("Grid Layer", pos = "top-right") %>%
+  add_json_editor(maxLines = 16, style = "width: 50%;")
 ```
