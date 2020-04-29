@@ -1,0 +1,15 @@
+name: r:deckgl-gallery
+output_dir: ../docs
+navbar:
+  title: rdeck Gallery
+  left:
+    - text: Home
+      href: index.html
+    - text: Polygon Layer
+      href: polygon-layer_vancouver-blocks.html
+output:
+  html_document:
+    theme: flatly
+    highlight: textmate
+    code_folding: hide
+    mathjax: null

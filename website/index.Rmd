@@ -4,7 +4,7 @@ title: r-deckgl Gallery
 
 This website is designed to show [r-deckgl](https://github.com/crazycapivara/deckgl) examples.
 
-## Get Started
+## Grid Layer
 
 Use the editor to change layer props. Press "e" when focused on the map to show / hide the editor.
 
